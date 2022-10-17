@@ -1,0 +1,31 @@
+create table store (id INTEGER PRIMARY KEY, item TEXT, section TEXT, price INTEGER, popularity INTEGER);
+insert into store values( 1, "Snuggles", "home",5.99, 20);
+insert into store  values( 3, "Red Velvet","food", 8.99, 45);
+insert into store values(5, "Mango", "food", 8.99, 35);
+insert into store values(6, "Pineapple","food", 7.99, 35);
+insert into store values (7, "Fresh Clean","home", 5.99, 25);
+insert into store values (8, "Mountain Top", "nature",7.99, 30);
+insert into store values (9, "Maple","food",8.99, 40);
+insert into store values (10, "Pumpkin","food", 8.99, 50);
+insert into store values (11, "Ocean","nature", 7.99, 50);
+insert into store values (12, "Birthday Cake","food",8.99, 35);
+insert into store values (13, "Oatmeal","food", 7.99, 40);
+insert into store values (14, "Linen", "home", 5.99, 20);
+insert into store values (15, "Sunset Skyline", "nature", 8.99, 30);
+
+select * FROM store order by popularity
+
+--display the database ordered by price. 
+SELECT * FROM store
+ORDER BY price desc; 
+
+--what is the avg price of items in the bulk section? 
+SELECT AVG(price) "avg bulk item price"
+FROM store
+where section='bulk'; 
+
+--what are the most 5 popular items? 
+SELECT item, price, popularity
+FROM store
+order by popularity desc
+limit 5; 
