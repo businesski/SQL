@@ -102,7 +102,7 @@ HAVING total_score >= 100
 ORDER BY total_score DESC;
 
 /* Force calculatin in newton [N] "F=m*a" /
-SELECT name, SUM(weight_kg * height_m / (speedspeed)) AS "Force_newton_[N]" FROM marvels
+SELECT name, SUM(weight_kg * height_m / (speed)) AS "Force_newton_[N]" FROM marvels
 GROUP BY name
 ORDER BY "Force_newton_[N]" DESC;
 
